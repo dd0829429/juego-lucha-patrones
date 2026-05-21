@@ -7,14 +7,7 @@ import com.juego.patrones.factory.GuerreroFactory;
 import com.juego.patrones.factory.MagoFactory;
 import com.juego.patrones.factory.PersonajeFactory;
 
-/**
- * Clase principal del juego.
- *
- * Une los 3 patrones:
- *  FACTORY   → crea los personajes
- *  STRATEGY  → cada uno ataca a su manera (configurado en la factory)
- *  DECORATOR → agrega armas sin tocar el codigo de Personaje
- */
+
 public class JuegoLucha {
 
     private Personaje jugador1;
@@ -57,18 +50,18 @@ public class JuegoLucha {
     }
 
     public static void main(String[] args) {
-        // FACTORY: crear personajes
+        // FACTORY: 
         PersonajeFactory f1 = new GuerreroFactory();
         PersonajeFactory f2 = new MagoFactory();
 
-        Personaje p1 = f1.crearPersonaje(); // Guerrero + AtaqueNormal
-        Personaje p2 = f2.crearPersonaje(); // Mago    + AtaqueFuego
+        Personaje p1 = f1.crearPersonaje(); 
+        Personaje p2 = f2.crearPersonaje(); 
 
-        // DECORATOR: equipar al guerrero con espada y escudo
-        p1 = new EspadaDecorator(p1);  // +15 dano al atacar
-        p1 = new EscudoDecorator(p1);  // -10 dano al recibir golpes
+        // DECORATOR
+        p1 = new EspadaDecorator(p1);  
+        p1 = new EscudoDecorator(p1);  
 
-        // STRATEGY: ya esta dentro de cada personaje (configurada por la factory)
+        // STRATEGY: 
 
         JuegoLucha juego = new JuegoLucha(p1, p2);
         juego.iniciar();

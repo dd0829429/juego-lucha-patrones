@@ -74,8 +74,7 @@ class JuegoLuchaTest {
 
     @Test
     void testMainMethod() {
-        // No usamos mock aquí porque el main crea objetos reales.
-        // Simplemente verificamos que no lanza excepción.
+        
         assertDoesNotThrow(() -> JuegoLucha.main(null));
         String output = outCaptor.toString();
         assertTrue(output.contains("COMBATE:") && output.contains("GANADOR:"));

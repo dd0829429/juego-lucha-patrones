@@ -3,10 +3,7 @@ package com.juego.patrones.strategy;
 import com.juego.model.Personaje;
 import java.util.Random;
 
-/**
- * Replica EXACTA de la logica original de Personaje.atacar()
- * Dano aleatorio entre 10 y 30, igual que el codigo base.
- */
+
 public class AtaqueNormal implements EstrategiaAtaque {
     private final Random rand = new Random();
 

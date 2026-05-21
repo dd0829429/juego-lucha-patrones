@@ -3,10 +3,7 @@ package com.juego.patrones.strategy;
 import com.juego.model.Personaje;
 import java.util.Random;
 
-/**
- * Ataque de hielo. Dano entre 15 y 35.
- * Usado por el Arquero.
- */
+
 public class AtaqueHielo implements EstrategiaAtaque {
     private final Random rand = new Random();
 
