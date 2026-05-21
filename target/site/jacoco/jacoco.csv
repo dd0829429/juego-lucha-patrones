@@ -1,0 +1,15 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+juego-lucha,com.juego.patrones.factory,GuerreroFactory,8,0,0,0,2,0,2,0,2,0
+juego-lucha,com.juego.patrones.factory,ArqueroFactory,8,0,0,0,2,0,2,0,2,0
+juego-lucha,com.juego.patrones.factory,MagoFactory,8,0,0,0,2,0,2,0,2,0
+juego-lucha,com.juego.patrones.strategy,AtaqueNormal,0,35,0,0,0,8,0,2,0,2
+juego-lucha,com.juego.patrones.strategy,AtaqueFuego,27,0,0,0,6,0,2,0,2,0
+juego-lucha,com.juego.patrones.strategy,AtaqueHielo,27,0,0,0,6,0,2,0,2,0
+juego-lucha,com.juego.patrones.decorator,PersonajeDecorator,26,0,0,0,9,0,5,0,5,0
+juego-lucha,com.juego.patrones.decorator,EscudoDecorator,19,0,0,0,6,0,2,0,2,0
+juego-lucha,com.juego.patrones.decorator,EspadaDecorator,15,0,0,0,6,0,2,0,2,0
+juego-lucha,com.juego.model,Arquero,9,0,0,0,3,0,1,0,1,0
+juego-lucha,com.juego.model,Personaje,12,59,1,5,5,18,4,8,3,6
+juego-lucha,com.juego.model,Guerrero,9,0,0,0,3,0,1,0,1,0
+juego-lucha,com.juego.model,Mago,9,0,0,0,3,0,1,0,1,0
+juego-lucha,com.juego.juego,JuegoLucha,128,0,8,0,35,0,7,0,3,0

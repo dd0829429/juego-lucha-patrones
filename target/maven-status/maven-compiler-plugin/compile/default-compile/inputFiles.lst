@@ -1,0 +1,16 @@
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/juego/JuegoLucha.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/model/Arquero.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/model/Guerrero.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/model/Mago.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/model/Personaje.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/patrones/decorator/EscudoDecorator.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/patrones/decorator/EspadaDecorator.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/patrones/decorator/PersonajeDecorator.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/patrones/factory/ArqueroFactory.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/patrones/factory/GuerreroFactory.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/patrones/factory/MagoFactory.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/patrones/factory/PersonajeFactory.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/patrones/strategy/AtaqueFuego.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/patrones/strategy/AtaqueHielo.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/patrones/strategy/AtaqueNormal.java
+/workspaces/juego-lucha-patrones/src/main/java/com/juego/patrones/strategy/EstrategiaAtaque.java
