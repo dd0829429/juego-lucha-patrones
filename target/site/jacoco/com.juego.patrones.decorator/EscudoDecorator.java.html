@@ -14,15 +14,15 @@ public class EscudoDecorator extends PersonajeDecorator {
     private static final int ABSORCION = 10;
 
     public EscudoDecorator(Personaje personaje) {
-<span class="nc" id="L17">        super(personaje);</span>
-<span class="nc" id="L18">    }</span>
+<span class="fc" id="L17">        super(personaje);</span>
+<span class="fc" id="L18">    }</span>
 
     @Override
     public void recibirDano(int dano) {
-<span class="nc" id="L22">        int danoReal = Math.max(0, dano - ABSORCION); // nunca negativo</span>
-<span class="nc" id="L23">        System.out.println(&quot;  [Escudo] absorbe &quot; + ABSORCION</span>
+<span class="fc" id="L22">        int danoReal = Math.max(0, dano - ABSORCION); // nunca negativo</span>
+<span class="fc" id="L23">        System.out.println(&quot;  [Escudo] absorbe &quot; + ABSORCION</span>
             + &quot; pts. Dano real: &quot; + danoReal);
-<span class="nc" id="L25">        personaje.recibirDano(danoReal);</span>
-<span class="nc" id="L26">    }</span>
+<span class="fc" id="L25">        personaje.recibirDano(danoReal);</span>
+<span class="fc" id="L26">    }</span>
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

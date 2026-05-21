@@ -7,15 +7,15 @@ import java.util.Random;
  * Ataque magico de fuego. Dano entre 25 y 50.
  * Usado por el Mago.
  */
-<span class="nc" id="L10">public class AtaqueFuego implements EstrategiaAtaque {</span>
-<span class="nc" id="L11">    private final Random rand = new Random();</span>
+<span class="fc" id="L10">public class AtaqueFuego implements EstrategiaAtaque {</span>
+<span class="fc" id="L11">    private final Random rand = new Random();</span>
 
     @Override
     public void atacar(Personaje atacante, Personaje defensor) {
-<span class="nc" id="L15">        int dano = rand.nextInt(26) + 25; // 25 a 50</span>
-<span class="nc" id="L16">        defensor.recibirDano(dano);</span>
-<span class="nc" id="L17">        System.out.println(atacante.getNombre() + &quot; lanza fuego a &quot; + defensor.getNombre()</span>
+<span class="fc" id="L15">        int dano = rand.nextInt(26) + 25; // 25 a 50</span>
+<span class="fc" id="L16">        defensor.recibirDano(dano);</span>
+<span class="fc" id="L17">        System.out.println(atacante.getNombre() + &quot; lanza fuego a &quot; + defensor.getNombre()</span>
             + &quot; causando &quot; + dano + &quot; puntos de danio.&quot;);
-<span class="nc" id="L19">    }</span>
+<span class="fc" id="L19">    }</span>
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

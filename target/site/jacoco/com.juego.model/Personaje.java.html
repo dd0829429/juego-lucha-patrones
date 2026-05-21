@@ -30,7 +30,7 @@ public class Personaje {
 
     // IGUAL AL ORIGINAL — sin cambios
     public void recibirDano(int dano) {
-<span class="pc bpc" id="L33" title="1 of 2 branches missed.">        if (dano &lt; 0) return;</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">        if (dano &lt; 0) return;</span>
 <span class="fc" id="L34">        this.puntosDeVida -= dano;</span>
 <span class="fc bfc" id="L35" title="All 2 branches covered.">        if (this.puntosDeVida &lt; 0) {</span>
 <span class="fc" id="L36">            this.puntosDeVida = 0;</span>
@@ -54,12 +54,12 @@ public class Personaje {
 
     // NUEVO (Strategy): permite cambiar el tipo de ataque en cualquier momento
     public void setEstrategia(EstrategiaAtaque estrategia) {
-<span class="nc" id="L57">        this.estrategia = estrategia;</span>
-<span class="nc" id="L58">    }</span>
+<span class="fc" id="L57">        this.estrategia = estrategia;</span>
+<span class="fc" id="L58">    }</span>
 
     // NUEVO (Strategy): permite consultar la estrategia actual (usado en tests)
     public EstrategiaAtaque getEstrategia() {
-<span class="nc" id="L62">        return this.estrategia;</span>
+<span class="fc" id="L62">        return this.estrategia;</span>
     }
 
     // NUEVO (Decorator): necesario para que el decorator pueda leer/escribir vida
@@ -67,4 +67,4 @@ public class Personaje {
 <span class="nc" id="L67">        this.puntosDeVida = puntosDeVida;</span>
 <span class="nc" id="L68">    }</span>
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

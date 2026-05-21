@@ -1,1 +1,5 @@
+/workspaces/juego-lucha-patrones/src/test/java/com/juego/juego/JuegoLuchaTest.java
 /workspaces/juego-lucha-patrones/src/test/java/com/juego/model/PersonajeTest.java
+/workspaces/juego-lucha-patrones/src/test/java/com/juego/patrones/decorator/DecoratorTest.java
+/workspaces/juego-lucha-patrones/src/test/java/com/juego/patrones/factory/FactoryTest.java
+/workspaces/juego-lucha-patrones/src/test/java/com/juego/patrones/strategy/StrategyTest.java

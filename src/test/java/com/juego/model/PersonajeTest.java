@@ -1,63 +1,66 @@
 package com.juego.model;
 
-import org.junit.jupiter.api.*;
-
+import com.juego.patrones.strategy.AtaqueNormal;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PersonajeTest {
 
-    private Personaje guerrero;
-
-    @BeforeEach
-    void setUp() {
-        guerrero = new Personaje("Thor");
+    @Test
+    void testConstructorYGetters() {
+        Personaje p = new Personaje("Thor");
+        assertEquals("Thor", p.getNombre());
+        assertEquals(100, p.getPuntosDeVida());
+        assertTrue(p.estaVivo());
+        assertNotNull(p.getEstrategia());
+        assertTrue(p.getEstrategia() instanceof AtaqueNormal);
     }
 
     @Test
-    @DisplayName("Debe crear personaje con 100 HP")
-    void testCreacionPersonaje() {
-
-        assertEquals("Thor", guerrero.getNombre());
-        assertEquals(100, guerrero.getPuntosDeVida());
-        assertTrue(guerrero.estaVivo());
+    void testRecibirDano_ReduceVida() {
+        Personaje p = new Personaje("Thor");
+        p.recibirDano(30);
+        assertEquals(70, p.getPuntosDeVida());
     }
 
     @Test
-    @DisplayName("Debe reducir HP al recibir danio")
-    void testRecibirDano() {
-
-        guerrero.recibirDano(30);
-
-        assertEquals(70, guerrero.getPuntosDeVida());
+    void testRecibirDano_NoBajaDeCero() {
+        Personaje p = new Personaje("Thor");
+        p.recibirDano(150);
+        assertEquals(0, p.getPuntosDeVida());
+        assertFalse(p.estaVivo());
     }
 
     @Test
-    @DisplayName("HP no debe ser negativo")
-    void testHpNoNegativo() {
-
-        guerrero.recibirDano(150);
-
-        assertEquals(0, guerrero.getPuntosDeVida());
-        assertFalse(guerrero.estaVivo());
+    void testRecibirDano_DanoNegativo_NoCambia() {
+        Personaje p = new Personaje("Thor");
+        p.recibirDano(-10);
+        assertEquals(100, p.getPuntosDeVida());
     }
 
     @Test
-    @DisplayName("Ataque debe causar danio entre 10 y 30")
-    void testRangoAtaque() {
+    void testSetEstrategia() {
+        Personaje p = new Personaje("Mago");
+        assertTrue(p.getEstrategia() instanceof AtaqueNormal);
+        p.setEstrategia(new com.juego.patrones.strategy.AtaqueFuego());
+        assertTrue(p.getEstrategia() instanceof com.juego.patrones.strategy.AtaqueFuego);
+    }
 
-        Personaje oponente = new Personaje("Loki");
+    @Test
+    void testGuerrero_TieneAtaqueNormal() {
+        Guerrero g = new Guerrero("Ares");
+        assertTrue(g.getEstrategia() instanceof AtaqueNormal);
+    }
 
-        int vidaInicial = oponente.getPuntosDeVida();
+    @Test
+    void testMago_TieneAtaqueFuego() {
+        Mago m = new Mago("Merlin");
+        assertTrue(m.getEstrategia() instanceof com.juego.patrones.strategy.AtaqueFuego);
+    }
 
-        guerrero.atacar(oponente);
-
-        int vidaFinal = oponente.getPuntosDeVida();
-
-        int dano = vidaInicial - vidaFinal;
-
-        assertTrue(
-            dano >= 10 && dano <= 30,
-            "El danio debe estar entre 10 y 30, fue: " + dano
-        );
+    @Test
+    void testArquero_TieneAtaqueHielo() {
+        Arquero a = new Arquero("Legolas");
+        assertTrue(a.getEstrategia() instanceof com.juego.patrones.strategy.AtaqueHielo);
     }
 }

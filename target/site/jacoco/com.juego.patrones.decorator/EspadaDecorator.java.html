@@ -14,14 +14,14 @@ public class EspadaDecorator extends PersonajeDecorator {
     private static final int DANO_EXTRA = 15;
 
     public EspadaDecorator(Personaje personaje) {
-<span class="nc" id="L17">        super(personaje);</span>
-<span class="nc" id="L18">    }</span>
+<span class="fc" id="L17">        super(personaje);</span>
+<span class="fc" id="L18">    }</span>
 
     @Override
     public void atacar(Personaje oponente) {
-<span class="nc" id="L22">        personaje.atacar(oponente);              // ataque normal</span>
-<span class="nc" id="L23">        oponente.recibirDano(DANO_EXTRA);        // dano extra de la espada</span>
-<span class="nc" id="L24">        System.out.println(&quot;  [Espada] +&quot; + DANO_EXTRA + &quot; de dano extra!&quot;);</span>
-<span class="nc" id="L25">    }</span>
+<span class="fc" id="L22">        personaje.atacar(oponente);              // ataque normal</span>
+<span class="fc" id="L23">        oponente.recibirDano(DANO_EXTRA);        // dano extra de la espada</span>
+<span class="fc" id="L24">        System.out.println(&quot;  [Espada] +&quot; + DANO_EXTRA + &quot; de dano extra!&quot;);</span>
+<span class="fc" id="L25">    }</span>
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

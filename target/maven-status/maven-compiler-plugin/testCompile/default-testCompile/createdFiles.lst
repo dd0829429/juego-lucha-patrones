@@ -1,1 +1,5 @@
+com/juego/juego/JuegoLuchaTest.class
+com/juego/patrones/decorator/DecoratorTest.class
+com/juego/patrones/strategy/EstrategiaAtaqueTest.class
+com/juego/patrones/factory/FactoryTest.class
 com/juego/model/PersonajeTest.class
