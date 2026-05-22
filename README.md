@@ -85,7 +85,6 @@ test/
 └── JuegoLuchaTest
 
 ```
-<<<<<<< HEAD
 
 # Comandos
 
@@ -106,13 +105,8 @@ mvn test
 ```bash
 mvn jacoco:report
 ```
----
-
-# Resultados
-
-=======
  
-# Comandos del Ciclo de Vida
+# Comandos 
  
 ## Compilar e instalar dependencias
  
@@ -149,15 +143,9 @@ target/site/jacoco/index.html
 - ✅ Uso de Mockito para validaciones
 - ✅ Aplicación de Programación Orientada a Objetos
 - ✅ Implementación de patrones de diseño
-<<<<<<< HEAD
 
 ---
 
-# Tecnologías Utilizadas
-
-=======
- 
----
  
 # Tecnologías Utilizadas
  
@@ -168,7 +156,7 @@ target/site/jacoco/index.html
 - Mockito
 - JaCoCo
 - GitHub Actions
-<<<<<<< HEAD
+
 
 ---
 
@@ -177,9 +165,6 @@ target/site/jacoco/index.html
 ```bash
 mvn exec:java -Dexec.mainClass="com.juego.juego.JuegoLucha"
 ```
-
-=======
- 
 ---
  
 # Ejecución del Proyecto
