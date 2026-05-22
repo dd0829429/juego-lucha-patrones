@@ -3,19 +3,16 @@
 import com.juego.model.Personaje;
 import java.util.Random;
 
-/**
- * Ataque de hielo. Dano entre 15 y 35.
- * Usado por el Arquero.
- */
-<span class="fc" id="L10">public class AtaqueHielo implements EstrategiaAtaque {</span>
-<span class="fc" id="L11">    private final Random rand = new Random();</span>
+
+<span class="fc" id="L7">public class AtaqueHielo implements EstrategiaAtaque {</span>
+<span class="fc" id="L8">    private final Random rand = new Random();</span>
 
     @Override
     public void atacar(Personaje atacante, Personaje defensor) {
-<span class="fc" id="L15">        int dano = rand.nextInt(21) + 15; // 15 a 35</span>
-<span class="fc" id="L16">        defensor.recibirDano(dano);</span>
-<span class="fc" id="L17">        System.out.println(atacante.getNombre() + &quot; congela a &quot; + defensor.getNombre()</span>
+<span class="fc" id="L12">        int dano = rand.nextInt(21) + 15; // 15 a 35</span>
+<span class="fc" id="L13">        defensor.recibirDano(dano);</span>
+<span class="fc" id="L14">        System.out.println(atacante.getNombre() + &quot; congela a &quot; + defensor.getNombre()</span>
             + &quot; causando &quot; + dano + &quot; puntos de danio. ¡Congelado!&quot;);
-<span class="fc" id="L19">    }</span>
+<span class="fc" id="L16">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

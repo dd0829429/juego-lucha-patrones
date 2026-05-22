@@ -2,26 +2,20 @@
 
 import com.juego.model.Personaje;
 
-/**
- * EspadaDecorator: agrega 15 puntos de dano extra en cada ataque.
- *
- * Uso:
- *   Personaje p = new EspadaDecorator(new Guerrero(&quot;Thor&quot;));
- *   p.atacar(enemigo); // dano del guerrero + 15 extra
- */
+
 public class EspadaDecorator extends PersonajeDecorator {
 
     private static final int DANO_EXTRA = 15;
 
     public EspadaDecorator(Personaje personaje) {
-<span class="fc" id="L17">        super(personaje);</span>
-<span class="fc" id="L18">    }</span>
+<span class="fc" id="L11">        super(personaje);</span>
+<span class="fc" id="L12">    }</span>
 
     @Override
     public void atacar(Personaje oponente) {
-<span class="fc" id="L22">        personaje.atacar(oponente);              // ataque normal</span>
-<span class="fc" id="L23">        oponente.recibirDano(DANO_EXTRA);        // dano extra de la espada</span>
-<span class="fc" id="L24">        System.out.println(&quot;  [Espada] +&quot; + DANO_EXTRA + &quot; de dano extra!&quot;);</span>
-<span class="fc" id="L25">    }</span>
+<span class="fc" id="L16">        personaje.atacar(oponente);              </span>
+<span class="fc" id="L17">        oponente.recibirDano(DANO_EXTRA);        </span>
+<span class="fc" id="L18">        System.out.println(&quot;  [Espada] +&quot; + DANO_EXTRA + &quot; de dano extra!&quot;);</span>
+<span class="fc" id="L19">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

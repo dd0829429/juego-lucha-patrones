@@ -3,21 +3,18 @@
 import com.juego.model.Personaje;
 import java.util.Random;
 
-/**
- * Replica EXACTA de la logica original de Personaje.atacar()
- * Dano aleatorio entre 10 y 30, igual que el codigo base.
- */
-<span class="fc" id="L10">public class AtaqueNormal implements EstrategiaAtaque {</span>
-<span class="fc" id="L11">    private final Random rand = new Random();</span>
+
+<span class="fc" id="L7">public class AtaqueNormal implements EstrategiaAtaque {</span>
+<span class="fc" id="L8">    private final Random rand = new Random();</span>
 
     @Override
     public void atacar(Personaje atacante, Personaje defensor) {
-<span class="fc" id="L15">        int MAX_DANO = 30;</span>
-<span class="fc" id="L16">        int MIN_DANO = 10;</span>
-<span class="fc" id="L17">        int dano = rand.nextInt(MAX_DANO - MIN_DANO + 1) + MIN_DANO;</span>
-<span class="fc" id="L18">        defensor.recibirDano(dano);</span>
-<span class="fc" id="L19">        System.out.println(atacante.getNombre() + &quot; ataca a &quot; + defensor.getNombre()</span>
+<span class="fc" id="L12">        int MAX_DANO = 30;</span>
+<span class="fc" id="L13">        int MIN_DANO = 10;</span>
+<span class="fc" id="L14">        int dano = rand.nextInt(MAX_DANO - MIN_DANO + 1) + MIN_DANO;</span>
+<span class="fc" id="L15">        defensor.recibirDano(dano);</span>
+<span class="fc" id="L16">        System.out.println(atacante.getNombre() + &quot; ataca a &quot; + defensor.getNombre()</span>
             + &quot; causando &quot; + dano + &quot; puntos de danio.&quot;);
-<span class="fc" id="L21">    }</span>
+<span class="fc" id="L18">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

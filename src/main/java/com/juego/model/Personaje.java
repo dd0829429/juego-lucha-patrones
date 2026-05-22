@@ -1,23 +1,17 @@
 package com.juego.model;
 
-import java.util.Random;
 import com.juego.patrones.strategy.EstrategiaAtaque;
 import com.juego.patrones.strategy.AtaqueNormal;
 
 public class Personaje {
     private String nombre;
-    private int puntosDeVida;
-    private final int MAX_DANO = 30;   
-    private final int MIN_DANO = 10;  
-    private Random rand;               
-
-    
+    private int puntosDeVida;          
     private EstrategiaAtaque estrategia;
+    
 
     public Personaje(String nombre) {
         this.nombre = nombre;
         this.puntosDeVida = 100;
-        this.rand = new Random();
         this.estrategia = new AtaqueNormal(); 
     }
 

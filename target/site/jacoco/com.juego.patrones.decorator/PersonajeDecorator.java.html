@@ -2,43 +2,34 @@
 
 import com.juego.model.Personaje;
 
-/**
- * PATRON DECORATOR — clase base.
- *
- * Hereda de Personaje (para poder usarse donde se espera un Personaje)
- * Y contiene un Personaje (para envolver y agregar funcionalidad).
- *
- * No modifica NADA del Personaje original.
- * Solo &quot;envuelve&quot; un personaje existente.
- */
 public abstract class PersonajeDecorator extends Personaje {
 
-    protected Personaje personaje; // el personaje que estamos decorando
+    protected Personaje personaje; 
 
     public PersonajeDecorator(Personaje personaje) {
-<span class="fc" id="L19">        super(personaje.getNombre()); // conserva el nombre original</span>
-<span class="fc" id="L20">        this.personaje = personaje;</span>
-<span class="fc" id="L21">    }</span>
+<span class="fc" id="L10">        super(personaje.getNombre()); </span>
+<span class="fc" id="L11">        this.personaje = personaje;</span>
+<span class="fc" id="L12">    }</span>
 
-    // Delega todo al personaje envuelto
+    
     @Override
     public void atacar(Personaje oponente) {
-<span class="fc" id="L26">        personaje.atacar(oponente);</span>
-<span class="fc" id="L27">    }</span>
+<span class="fc" id="L17">        personaje.atacar(oponente);</span>
+<span class="fc" id="L18">    }</span>
 
     @Override
     public void recibirDano(int dano) {
-<span class="fc" id="L31">        personaje.recibirDano(dano);</span>
-<span class="fc" id="L32">    }</span>
+<span class="fc" id="L22">        personaje.recibirDano(dano);</span>
+<span class="fc" id="L23">    }</span>
 
     @Override
     public boolean estaVivo() {
-<span class="fc" id="L36">        return personaje.estaVivo();</span>
+<span class="fc" id="L27">        return personaje.estaVivo();</span>
     }
 
     @Override
     public int getPuntosDeVida() {
-<span class="fc" id="L41">        return personaje.getPuntosDeVida();</span>
+<span class="fc" id="L32">        return personaje.getPuntosDeVida();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

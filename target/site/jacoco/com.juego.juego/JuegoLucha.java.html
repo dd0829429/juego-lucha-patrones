@@ -7,71 +7,64 @@ import com.juego.patrones.factory.GuerreroFactory;
 import com.juego.patrones.factory.MagoFactory;
 import com.juego.patrones.factory.PersonajeFactory;
 
-/**
- * Clase principal del juego.
- *
- * Une los 3 patrones:
- *  FACTORY   → crea los personajes
- *  STRATEGY  → cada uno ataca a su manera (configurado en la factory)
- *  DECORATOR → agrega armas sin tocar el codigo de Personaje
- */
+
 public class JuegoLucha {
 
     private Personaje jugador1;
     private Personaje jugador2;
 
-<span class="fc" id="L23">    public JuegoLucha(Personaje jugador1, Personaje jugador2) {</span>
-<span class="fc" id="L24">        this.jugador1 = jugador1;</span>
-<span class="fc" id="L25">        this.jugador2 = jugador2;</span>
-<span class="fc" id="L26">    }</span>
+<span class="fc" id="L16">    public JuegoLucha(Personaje jugador1, Personaje jugador2) {</span>
+<span class="fc" id="L17">        this.jugador1 = jugador1;</span>
+<span class="fc" id="L18">        this.jugador2 = jugador2;</span>
+<span class="fc" id="L19">    }</span>
 
     public void iniciar() {
-<span class="fc" id="L29">        System.out.println(&quot;========================================&quot;);</span>
-<span class="fc" id="L30">        System.out.println(&quot;  COMBATE: &quot;</span>
-<span class="fc" id="L31">            + jugador1.getNombre() + &quot; VS &quot; + jugador2.getNombre());</span>
-<span class="fc" id="L32">        System.out.println(&quot;========================================&quot;);</span>
+<span class="fc" id="L22">        System.out.println(&quot;========================================&quot;);</span>
+<span class="fc" id="L23">        System.out.println(&quot;  COMBATE: &quot;</span>
+<span class="fc" id="L24">            + jugador1.getNombre() + &quot; VS &quot; + jugador2.getNombre());</span>
+<span class="fc" id="L25">        System.out.println(&quot;========================================&quot;);</span>
 
-<span class="fc" id="L34">        int turno = 1;</span>
-<span class="fc bfc" id="L35" title="All 4 branches covered.">        while (jugador1.estaVivo() &amp;&amp; jugador2.estaVivo()) {</span>
-<span class="fc" id="L36">            System.out.println(&quot;\n--- Turno &quot; + turno + &quot; ---&quot;);</span>
+<span class="fc" id="L27">        int turno = 1;</span>
+<span class="fc bfc" id="L28" title="All 4 branches covered.">        while (jugador1.estaVivo() &amp;&amp; jugador2.estaVivo()) {</span>
+<span class="fc" id="L29">            System.out.println(&quot;\n--- Turno &quot; + turno + &quot; ---&quot;);</span>
 
-<span class="fc" id="L38">            jugador1.atacar(jugador2);</span>
-<span class="fc" id="L39">            System.out.println(&quot;  HP &quot; + jugador2.getNombre()</span>
-<span class="fc" id="L40">                + &quot;: &quot; + jugador2.getPuntosDeVida());</span>
+<span class="fc" id="L31">            jugador1.atacar(jugador2);</span>
+<span class="fc" id="L32">            System.out.println(&quot;  HP &quot; + jugador2.getNombre()</span>
+<span class="fc" id="L33">                + &quot;: &quot; + jugador2.getPuntosDeVida());</span>
 
-<span class="fc bfc" id="L42" title="All 2 branches covered.">            if (jugador2.estaVivo()) {</span>
-<span class="fc" id="L43">                jugador2.atacar(jugador1);</span>
-<span class="fc" id="L44">                System.out.println(&quot;  HP &quot; + jugador1.getNombre()</span>
-<span class="fc" id="L45">                    + &quot;: &quot; + jugador1.getPuntosDeVida());</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">            if (jugador2.estaVivo()) {</span>
+<span class="fc" id="L36">                jugador2.atacar(jugador1);</span>
+<span class="fc" id="L37">                System.out.println(&quot;  HP &quot; + jugador1.getNombre()</span>
+<span class="fc" id="L38">                    + &quot;: &quot; + jugador1.getPuntosDeVida());</span>
             }
-<span class="fc" id="L47">            turno++;</span>
+<span class="fc" id="L40">            turno++;</span>
         }
 
-<span class="fc bfc" id="L50" title="All 2 branches covered.">        String ganador = jugador1.estaVivo()</span>
-<span class="fc" id="L51">            ? jugador1.getNombre()</span>
-<span class="fc" id="L52">            : jugador2.getNombre();</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">        String ganador = jugador1.estaVivo()</span>
+<span class="fc" id="L44">            ? jugador1.getNombre()</span>
+<span class="fc" id="L45">            : jugador2.getNombre();</span>
 
-<span class="fc" id="L54">        System.out.println(&quot;\n========================================&quot;);</span>
-<span class="fc" id="L55">        System.out.println(&quot;  GANADOR: &quot; + ganador + &quot; !!!&quot;);</span>
-<span class="fc" id="L56">        System.out.println(&quot;========================================&quot;);</span>
-<span class="fc" id="L57">    }</span>
+<span class="fc" id="L47">        System.out.println(&quot;\n========================================&quot;);</span>
+<span class="fc" id="L48">        System.out.println(&quot;  GANADOR: &quot; + ganador + &quot; !!!&quot;);</span>
+<span class="fc" id="L49">        System.out.println(&quot;========================================&quot;);</span>
+<span class="fc" id="L50">    }</span>
 
     public static void main(String[] args) {
-        // FACTORY: crear personajes
-<span class="fc" id="L61">        PersonajeFactory f1 = new GuerreroFactory();</span>
-<span class="fc" id="L62">        PersonajeFactory f2 = new MagoFactory();</span>
+        // FACTORY: 
+<span class="fc" id="L54">        PersonajeFactory f1 = new GuerreroFactory();</span>
+<span class="fc" id="L55">        PersonajeFactory f2 = new MagoFactory();</span>
 
-<span class="fc" id="L64">        Personaje p1 = f1.crearPersonaje(); // Guerrero + AtaqueNormal</span>
-<span class="fc" id="L65">        Personaje p2 = f2.crearPersonaje(); // Mago    + AtaqueFuego</span>
+<span class="fc" id="L57">        Personaje p1 = f1.crearPersonaje(); </span>
+<span class="fc" id="L58">        Personaje p2 = f2.crearPersonaje(); </span>
 
-        // DECORATOR: equipar al guerrero con espada y escudo
-<span class="fc" id="L68">        p1 = new EspadaDecorator(p1);  // +15 dano al atacar</span>
-<span class="fc" id="L69">        p1 = new EscudoDecorator(p1);  // -10 dano al recibir golpes</span>
+        // DECORATOR
+<span class="fc" id="L61">        p1 = new EspadaDecorator(p1);  </span>
+<span class="fc" id="L62">        p1 = new EscudoDecorator(p1);  </span>
 
-        // STRATEGY: ya esta dentro de cada personaje (configurada por la factory)
+        // STRATEGY: 
 
-<span class="fc" id="L73">        JuegoLucha juego = new JuegoLucha(p1, p2);</span>
-<span class="fc" id="L74">        juego.iniciar();</span>
-<span class="fc" id="L75">    }</span>
+<span class="fc" id="L66">        JuegoLucha juego = new JuegoLucha(p1, p2);</span>
+<span class="fc" id="L67">        juego.iniciar();</span>
+<span class="fc" id="L68">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -2,27 +2,21 @@
 
 import com.juego.model.Personaje;
 
-/**
- * EscudoDecorator: absorbe 10 puntos de cada golpe recibido.
- *
- * Uso:
- *   Personaje p = new EscudoDecorator(new Guerrero(&quot;Thor&quot;));
- *   p.recibirDano(30); // recibe solo 20 en vez de 30
- */
+
 public class EscudoDecorator extends PersonajeDecorator {
 
     private static final int ABSORCION = 10;
 
     public EscudoDecorator(Personaje personaje) {
-<span class="fc" id="L17">        super(personaje);</span>
-<span class="fc" id="L18">    }</span>
+<span class="fc" id="L11">        super(personaje);</span>
+<span class="fc" id="L12">    }</span>
 
     @Override
     public void recibirDano(int dano) {
-<span class="fc" id="L22">        int danoReal = Math.max(0, dano - ABSORCION); // nunca negativo</span>
-<span class="fc" id="L23">        System.out.println(&quot;  [Escudo] absorbe &quot; + ABSORCION</span>
+<span class="fc" id="L16">        int danoReal = Math.max(0, dano - ABSORCION); </span>
+<span class="fc" id="L17">        System.out.println(&quot;  [Escudo] absorbe &quot; + ABSORCION</span>
             + &quot; pts. Dano real: &quot; + danoReal);
-<span class="fc" id="L25">        personaje.recibirDano(danoReal);</span>
-<span class="fc" id="L26">    }</span>
+<span class="fc" id="L19">        personaje.recibirDano(danoReal);</span>
+<span class="fc" id="L20">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

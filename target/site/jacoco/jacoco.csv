@@ -9,7 +9,7 @@ juego-lucha,com.juego.patrones.decorator,PersonajeDecorator,0,26,0,0,0,9,0,5,0,5
 juego-lucha,com.juego.patrones.decorator,EscudoDecorator,0,19,0,0,0,6,0,2,0,2
 juego-lucha,com.juego.patrones.decorator,EspadaDecorator,0,15,0,0,0,6,0,2,0,2
 juego-lucha,com.juego.model,Arquero,0,9,0,0,0,3,0,1,0,1
-juego-lucha,com.juego.model,Personaje,4,67,0,6,2,21,1,11,1,8
+juego-lucha,com.juego.model,Personaje,4,56,0,6,2,18,1,11,1,8
 juego-lucha,com.juego.model,Guerrero,0,9,0,0,0,3,0,1,0,1
 juego-lucha,com.juego.model,Mago,0,9,0,0,0,3,0,1,0,1
 juego-lucha,com.juego.juego,JuegoLucha,0,128,0,8,0,35,0,7,0,3
