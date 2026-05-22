@@ -83,3 +83,55 @@ test/
 ├── DecoratorTest
 ├── FactoryTest
 └── JuegoLuchaTest
+
+```
+
+# Comandos
+
+## dependencias
+
+```bash
+mvn clean compile
+```
+
+## pruebas unitarias (JUnit 5 + Mockito)
+
+```bash
+mvn test
+```
+
+## reporte
+
+```bash
+mvn jacoco:report
+```
+---
+
+# Resultados
+
+- ✅ 25 pruebas unitarias exitosas
+- ✅ Cobertura superior al 80% usando JaCoCo
+- ✅ Integración continua con GitHub Actions
+- ✅ Uso de Mockito para validaciones
+- ✅ Aplicación de Programación Orientada a Objetos
+- ✅ Implementación de patrones de diseño
+
+---
+
+# Tecnologías Utilizadas
+
+- Java 17
+- Maven
+- JUnit 5
+- Mockito
+- JaCoCo
+- GitHub Actions
+
+---
+
+# Ejecución del Proyecto
+
+```bash
+mvn exec:java -Dexec.mainClass="com.juego.juego.JuegoLucha"
+```
+
