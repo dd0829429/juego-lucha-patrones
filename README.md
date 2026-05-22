@@ -145,10 +145,3 @@ target/site/jacoco/index.html
 ```bash
 mvn exec:java -Dexec.mainClass="com.juego.juego.JuegoLucha"
 ```
----
- 
-# Ejecución del Proyecto
- 
-```bash
-mvn exec:java -Dexec.mainClass="com.juego.juego.JuegoLucha"
-```
