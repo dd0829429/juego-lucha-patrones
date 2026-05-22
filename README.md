@@ -83,3 +83,88 @@ test/
 ├── DecoratorTest
 ├── FactoryTest
 └── JuegoLuchaTest
+
+```
+ 
+---
+ 
+# Diagrama de Clases
+ 
+![Diagrama de Clases](diagrama.png)
+ 
+---
+ 
+# Comandos del Ciclo de Vida
+ 
+## Compilar e instalar dependencias
+ 
+```bash
+mvn clean compile
+```
+ 
+## Ejecutar pruebas unitarias (JUnit 5 + Mockito)
+ 
+```bash
+mvn test
+```
+ 
+## Generar reporte de cobertura
+ 
+```bash
+mvn jacoco:report
+```
+ 
+El reporte interactivo en formato HTML se genera en:
+ 
+```text
+target/site/jacoco/index.html
+```
+ 
+---
+ 
+# Resultados
+ 
+- ✅ 25 pruebas unitarias exitosas
+- ✅ Cobertura superior al 80% usando JaCoCo
+- ✅ Integración continua con GitHub Actions
+- ✅ Uso de Mockito para validaciones
+- ✅ Aplicación de Programación Orientada a Objetos
+- ✅ Implementación de patrones de diseño
+ 
+---
+ 
+# Tecnologías Utilizadas
+ 
+- Java 17
+- Maven
+- JUnit 5
+- Mockito
+- JaCoCo
+- GitHub Actions
+ 
+---
+ 
+# Ejecución del Proyecto
+ 
+```bash
+mvn exec:java -Dexec.mainClass="com.juego.juego.JuegoLucha"
+```
+ 
+---
+ 
+# Pipeline CI/CD
+ 
+El proyecto cuenta con integración continua usando GitHub Actions.
+ 
+Cada push ejecuta automáticamente:
+ 
+- compilación
+- pruebas unitarias
+- cobertura JaCoCo
+ 
+Disponible en la pestaña:
+ 
+```text
+GitHub → Actions
+
+```
