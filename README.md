@@ -86,26 +86,6 @@ test/
 
 ```
 
-# Comandos
-
-## dependencias
-
-```bash
-mvn clean compile
-```
-
-## pruebas unitarias (JUnit 5 + Mockito)
-
-```bash
-mvn test
-```
-
-## reporte
-
-```bash
-mvn jacoco:report
-```
- 
 # Comandos 
  
 ## Compilar e instalar dependencias
@@ -172,23 +152,3 @@ mvn exec:java -Dexec.mainClass="com.juego.juego.JuegoLucha"
 ```bash
 mvn exec:java -Dexec.mainClass="com.juego.juego.JuegoLucha"
 ```
- 
----
- 
-# Pipeline CI/CD
- 
-El proyecto cuenta con integración continua usando GitHub Actions.
- 
-Cada push ejecuta automáticamente:
- 
-- compilación
-- pruebas unitarias
-- cobertura JaCoCo
- 
-Disponible en la pestaña:
- 
-```text
-GitHub → Actions
-
-```
-
