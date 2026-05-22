@@ -86,14 +86,6 @@ test/
 
 ```
  
----
- 
-# Diagrama de Clases
- 
-![Diagrama de Clases](diagrama.png)
- 
----
- 
 # Comandos del Ciclo de Vida
  
 ## Compilar e instalar dependencias
